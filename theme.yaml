@@ -1,0 +1,9 @@
+Theme:
+  Name: FusionFabric.cloud
+  Mode: questions
+  TopicsMode: questions
+  Description: The official TeamHub theme (1.6.6 version).
+  Author: DZone, Inc.
+  Version: 1.0-beta
+  Parent: thub 
+  

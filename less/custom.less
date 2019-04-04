@@ -1,0 +1,135 @@
+//// Override this file to add some simple CSS or LESS overrides in your theme
+
+
+@import '/less/palette.less';
+@import '/less/grid.less';
+
+
+.wrapper-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-wrapper {
+  border-radius: 3px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -5%;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  max-width: 1080px;
+  z-index: 1;
+}
+
+.category-box {
+  background-color: @ffdc-white;
+  -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  -webkit-transition-duration: 220ms;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transform: scale(1.045);
+  margin: 15px;
+  padding: 30px 10px;
+  text-align: center;
+  transform: scale(1.045);
+  transition-duration: 220ms;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  width: 220px;
+  z-index: 1;
+  height: 178px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+
+  &:active {
+    background-color: #fff;
+    -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.15);
+    -webkit-transform: scale(1.045);
+    transform: scale(1.045);
+    z-index: 2;
+    border-radius: 3px;
+    transform: scale(1.045);
+  }
+}
+
+.category-box__icon {
+  display: inline-block;
+  margin-bottom: 12px;
+
+  svg {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.box-title {
+  margin-bottom: 12px;
+  color: @ffdc-Darkgray;
+  font-size: 19px;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  font-family: roboto,Arial,sans-serif;
+  
+  
+}
+
+.box-description {
+  font-size: 15px;
+  line-height: 1.47;
+  letter-spacing: 0.1px;
+  text-align: center;
+  color: @ffdc-Darkgray;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: roboto,Arial,sans-serif;
+}
+
+
+.btn-warning {
+  background-color: @ffdc-crimson-25 !important;
+}
+
+.hero-inner {
+  background-image: linear-gradient(90deg, @ffdc-blue 0%, @ffdc-fuchsia 43.31%, @ffdc-orange1 74.03%, @ffdc-orange2 100%);
+  padding-top: 70px;
+  padding-bottom: 70px;
+  
+
+  .hero-title, .hero-subtitle {
+    color: @ffdc-white;
+    margin: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    
+  }
+
+  .hero-title {
+    font-size: 2.375rem;
+    font-weight: 400;
+    font-family: 'Futura', sans-serif;
+  }
+
+  .hero-subtitle {
+    font-size: 1.375rem;
+    font-family: 'Futura', sans-serif;
+    font-weight: 200;
+  }
+}
+
+*body #main-navbar .navbar-inner .row-fluid .search-wrapper .navbar-search .search-query {
+  height: 55px !important;
+  border-radius: 100px !important;
+  padding: 20px;
+}
+
+
