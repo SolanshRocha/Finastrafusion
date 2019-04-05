@@ -40,4 +40,4 @@
 
     </div> <!-- /extra -->
 </section>
-<@teamhub.widgets "system.footer/after" />
+<@teamhub.widgets "system.footer/after" /> 

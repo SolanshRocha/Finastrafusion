@@ -3,133 +3,146 @@
 
 @import '/less/palette.less';
 @import '/less/grid.less';
+@import '/less/hero.less';
 
+// @import '/less/buttons.less';
 
+//// Override this file to add some simple CSS or LESS overrides in your theme
 .wrapper-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-.main-wrapper {
-  border-radius: 3px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: -5%;
-  margin-right: auto;
-  margin-bottom: 0px;
-  margin-left: auto;
-  max-width: 1080px;
-  z-index: 1;
-}
-
-.category-box {
-  background-color: @ffdc-white;
-  -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.15);
-  border-radius: 3px;
-  -webkit-transition-duration: 220ms;
-  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.15);
-  -webkit-transform: scale(1.045);
-  margin: 15px;
-  padding: 30px 10px;
-  text-align: center;
-  transform: scale(1.045);
-  transition-duration: 220ms;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  width: 220px;
-  z-index: 1;
-  height: 178px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-
-
-  &:active {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .main-wrapper {
+    border-radius: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -5%;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    max-width: 1080px;
+    z-index: 1;
+  }
+  
+  .category-box {
     background-color: #fff;
     -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    -webkit-transition-duration: 220ms;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.15);
     -webkit-transform: scale(1.045);
-    transform: scale(1.045);
-    z-index: 2;
-    border-radius: 3px;
-    transform: scale(1.045);
-  }
-}
-
-.category-box__icon {
-  display: inline-block;
-  margin-bottom: 12px;
-
-  svg {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-.box-title {
-  margin-bottom: 12px;
-  color: @ffdc-Darkgray;
-  font-size: 19px;
-  font-weight: bold;
-  letter-spacing: 0.2px;
-  font-family: roboto,Arial,sans-serif;
-  
-  
-}
-
-.box-description {
-  font-size: 15px;
-  line-height: 1.47;
-  letter-spacing: 0.1px;
-  text-align: center;
-  color: @ffdc-Darkgray;
-  padding-right: 10px;
-  padding-left: 10px;
-  font-family: roboto,Arial,sans-serif;
-}
-
-
-.btn-warning {
-  background-color: @ffdc-crimson-25 !important;
-}
-
-.hero-inner {
-  background-image: linear-gradient(90deg, @ffdc-blue 0%, @ffdc-fuchsia 43.31%, @ffdc-orange1 74.03%, @ffdc-orange2 100%);
-  padding-top: 70px;
-  padding-bottom: 70px;
-  
-
-  .hero-title, .hero-subtitle {
-    color: @ffdc-white;
-    margin: 0;
-    margin-bottom: 30px;
+    margin: 15px;
+    padding: 30px 10px;
     text-align: center;
+    transform: scale(1.045);
+    transition-duration: 220ms;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    width: 220px;
+    z-index: 1;
+    height: 178px;
+  
+    &:active {
+      background-color: #fff;
+      -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.15);
+      box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.15);
+      -webkit-transform: scale(1.045);
+      transform: scale(1.045);
+      z-index: 2;
+      border-radius: 3px;
+      transform: scale(1.045);
+    }
+  }
+  
+  .category-box__icon {
+    display: inline-block;
+    margin-bottom: 12px;
+  
+    svg {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  
+  .box-title {
+    margin-bottom: 12px;
+    color: #2c2d30;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+    color: #4c6072;
+  }
+  
+  .box-description {
+    font-size: 15px;
+    line-height: 1.47;
+    letter-spacing: 0.1px;
+    text-align: center;
+    color: #6d859e;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  
+// SEARCHING BUTTON
+// main bar
+  #main-navbar .navbar-inner {
+    background: @ffdc-fuchsia;
+    padding: 0 20px;
+    border-width: 0; 
+  }
+
+//creat BUTTON
+  .btn.btn-warning {
+    background-color: @ffdc-crimson;
+  }
+  .btn.btn-warning:hover {
+    background: @ffdc-white;
+  }
+
+  a {
+    color: @ffdc-charcoal;
+    text-decoration: none;
+  }
+
+
+
+// SIN IN PAGE   
+  .login #username {
+    width: 100%;
+    height: 38px;
+    border-radius: 18px 0%;
+    box-sizing: border-box;   
+  }
+  .login #password {
+    width: 100%;
+    height: 38px;
+    border-radius: 18px 0%;
+    box-sizing: border-box;
+  }
+
+.login .login-modes .btn {
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 18px 0%;
+    background-color: pink;
     
-  }
-
-  .hero-title {
-    font-size: 2.375rem;
-    font-weight: 400;
-    font-family: 'Futura', sans-serif;
-  }
-
-  .hero-subtitle {
-    font-size: 1.375rem;
-    font-family: 'Futura', sans-serif;
-    font-weight: 200;
-  }
 }
 
-*body #main-navbar .navbar-inner .row-fluid .search-wrapper .navbar-search .search-query {
-  height: 55px !important;
-  border-radius: 100px !important;
-  padding: 20px;
+.btn.btn-primary:hover {
+    background-color: @ffdc-fuchsia;
 }
 
-
+.btn.btn-primary {
+    background-color: pink;
+    font-size: 16px;
+    margin-top: 5px;
+    border-radius: 18px 0%;
+    width: 49%;
+    height: 40px; 
+}
