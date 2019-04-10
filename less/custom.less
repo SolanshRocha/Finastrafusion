@@ -28,7 +28,7 @@
   }
   
   .category-box {
-    background-color: #fff;
+    background-color: @ffdc-white;
     -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.15);
     border-radius: 3px;
     -webkit-transition-duration: 220ms;
@@ -48,7 +48,7 @@
     height: 178px;
   
     &:active {
-      background-color: #fff;
+      background-color: @ffdc-white;
       -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.15);
       box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.15);
       -webkit-transform: scale(1.045);
@@ -71,11 +71,10 @@
   
   .box-title {
     margin-bottom: 12px;
-    color: #2c2d30;
+    color: @ffdc-charcoal;
     font-size: 19px;
     font-weight: bold;
     letter-spacing: 0.2px;
-    color: #4c6072;
   }
   
   .box-description {
@@ -83,7 +82,7 @@
     line-height: 1.47;
     letter-spacing: 0.1px;
     text-align: center;
-    color: #6d859e;
+    color: @ffdc-charcoal;
     padding-right: 10px;
     padding-left: 10px;
   }
@@ -99,19 +98,42 @@
 //creat BUTTON
   .btn.btn-warning {
     background-color: @ffdc-crimson;
+    font-size: 14px;
   }
   .btn.btn-warning:hover {
-    background: @ffdc-white;
+    background-color: @ffdc-crimson;
+    font-size: 16px;
+  }
+  
+  .btn-group.open .btn-warning.dropdown-toggle {
+    background-color: @ffdc-crimson;
+  }
+  
+
+  
+
+// SPACE BUTTON 
+
+  #main-navbar .navbar-inner .row-fluid .nav-links #spacesMenu #spaces-menu-dropdown {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    color: @ffdc-white;
   }
 
-  a {
-    color: @ffdc-charcoal;
+
+// NAV LINKS BUTTONS 
+
+  #main-navbar .navbar-inner .row-fluid .nav-links > li > a {
     text-decoration: none;
-  }
+    color: @ffdc-white;
+    display: block;
+    padding: 10px 5px; 
+  } 
 
-
-
-// SIN IN PAGE   
+// SIGN IN PAGE  
+ 
   .login #username {
     width: 100%;
     height: 38px;
@@ -125,24 +147,133 @@
     box-sizing: border-box;
   }
 
-.login .login-modes .btn {
+  .login .login-modes .btn {
     width: 100%;
     font-size: 16px;
     margin-top: 10px;
     border-radius: 18px 0%;
-    background-color: pink;
-    
-}
-
-.btn.btn-primary:hover {
     background-color: @ffdc-fuchsia;
-}
+    
+  }
 
-.btn.btn-primary {
-    background-color: pink;
-    font-size: 16px;
-    margin-top: 5px;
-    border-radius: 18px 0%;
-    width: 49%;
-    height: 40px; 
-}
+  .btn.btn-primary:hover {
+    background-color: @ffdc-crimson;
+  }
+
+
+// QUESTION PAGE 
+
+  a {
+    color: @ffdc-charcoal;
+    text-decoration: none;
+  } 
+
+  .sidebarOne .widget#recent-badges-widget .answer-badges a, .sidebarTwo .widget#recent-badges-widget .answer-badges a {
+    font-weight: 600;
+    color: @ffdc-charcoal;
+  }
+
+  a:hover {
+    color: @ffdc-violet;
+  }
+
+  .comments-container .comment .comment-content .comment-info a { 
+    color: @ffdc-charcoal;
+  }
+
+  .comments-container .comment .comment-content .comment-header a[rel="user"] {
+    color: @ffdc-charcoal;
+    font-weight: 600;
+  }
+
+  .mainContent .answer-list .widget-content .answer-container {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 15px 8px;
+    border-top: solid 1px #e5e6e7;
+  }
+
+  .accepted-answer {
+    background-image: linear-gradient(to bottom, #fff, rgba(65, 65, 65, 0.10));
+  }
+
+
+  .label-outline-primary {
+    color: @ffdc-grass;
+    border-color: @ffdc-grass;
+  } 
+
+  .btn {
+    border-radius: 7px;
+    text-transform: uppercase;
+    text-shadow: none;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.54;
+    letter-spacing: 1px;
+    padding: 5px 10px 6px;
+    background-image: none;
+    color: @ffdc-white;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+
+  }  
+
+  .btn.btn-success {
+    background-color: @ffdc-crimson;
+  }
+
+  .btn.btn-danger:hover {
+    background-color: @ffdc-fuchsia;
+  }
+
+  .btn.btn-primary {
+    background-color: @ffdc-crimson;
+    color: @ffdc-white;
+  }
+
+  .btn.btn-primary:hover {
+    background-color: @ffdc-fuchsia;
+  }
+
+//buttons answers and answers comments
+  .btn.btn-default {
+    background-color: @ffdc-white;
+    color: @ffdc-charcoal;
+  }
+
+
+
+  
+  .sidebarTwo .widget .widget-header h3 {
+    float: left;
+    font-size: 15px;
+    font-weight: 600;
+    color: @ffdc-charcoal;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 0.1px;
+    line-height: 45px;
+  }
+
+  
+
+ 
+  
+
+  
+
+
+   
+
+  
+
+  
+
+  
+
+  
+
+  
