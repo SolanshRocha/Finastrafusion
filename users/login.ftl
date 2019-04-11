@@ -26,70 +26,10 @@
             <li><@trans key="thub.users.login.info.blurb.3" /></li>
         </ul>
     </div>
-    <div class="login-modes span6">
-        <h2><@trans key="thub.users.login.title" /></h2>
-    <#if authError??>
-        <div class="alert alert-error">${authError}</div>
-    <#elseif flash??>
-        <#list flash?keys as key>
-	        <div class="alert alert-${key} ">
-	        ${flash[key]?string}
-	        </div>
-	    </#list>
-    <#elseif SPRING_SECURITY_LAST_EXCEPTION?? && RequestParameters['loginFail']??>
-        <div class="alert alert-error"><@trans key="thub.users.login.unsuccessful" default="Your login attempt was not successful, try again." /></div>
-    </#if>
-    <#if authModeKeys?seq_contains("local")>
-        <form class="form" action="<@spring.url "/login" />" method="post">
-            <div class="control-group">
-                <div class="controls">
-                    <div class="input-prepend">
-                        <#--  <span class="add-on"><i class="icon-user"></i></span>  -->
-                        <input type="text" id="username" name="username" value="<#if lastUsername?? && RequestParameters.loginFail??><@teamhub.clean lastUsername/></#if>" placeholder="${usernamePlaceholder}"
-                               class="username-field" <#if loginBanned??>disabled="disabled"</#if> autocomplete="off"/>
-                    </div>
-                </div>
-            </div>
-            <div class="control-group">
-                <div class="controls">
-                    <div class="input-prepend">
-                        <#--  <span class="add-on"><i class="icon-key"></i></span>  -->
-                        <input type="password" id="password" name="password" value=""
-                               placeholder="<@trans key="thub.users.login.password.placeholder" />"
-                               class="password-field" <#if loginBanned??>disabled="disabled"</#if> autocomplete="off"/>
-                    </div>
-                    <input type="submit" value="<@trans key="label.login" />" <#if loginBanned??>disabled="disabled"</#if> class="pull-right btn btn-primary"/>
-                </div>
-            </div>
-            <div class="actions clearfix">
-                <div class="forgot-password-wrap"><a
-                    href="<@url name="users:temp_login" />"><@trans key="thub.users.login.forgotPassword" /></a>
-                </div>
 
-                <label class="keepMeLoggedIn checkbox pull-left">
-                    <input name="remember-me" type="checkbox" value="true" checked="checked"
-                           tabindex="4"/> <@trans key="thub.users.login.keepMeLoggedIn" />
-                </label>
-            </div>
-
-        </form>
-    </#if>
-
-
-<@security.access allowIf='ROLE_REGISTER_WITH_SITE'>
-        <div class="sign-up">
-            <#assign registerLink><a
-                href="<@url name="users:register" />"><@trans key="thub.users.login.signup" /></a></#assign>
-            <@trans key="thub.users.login.dontHaveAccount" params=[registerLink] />
-        </div>
-    </@security.access>
-
-    <#if authModeKeys?seq_contains("local") && authModeKeys?size &gt; 1>
-        <div class="seperate-or">
-            <span class="or"><@trans key="thub.users.login.orConnectWith" /></span>
-        </div>
-    </#if>
-        <div class="social-login clearfix">
+<div class="login-modes span6">
+    <h2><@trans key="thub.users.login.title" /></h2>
+    <div class="social-login clearfix">
         <#assign showHeader = false/>
         <#list authModeKeys as key>
             <#assign authMode = authModes[key] />
@@ -106,9 +46,77 @@
             <div id="openid_placeholder" class="bright-form"></div>
         </#if>
         </div>
+
+        <#if authModeKeys?seq_contains("local") && authModeKeys?size &gt; 1>
+        <div class="seperate-or">
+            <span class="or">
+                   <a href="#" data-toggle="collapse" data-target="#demo">Administrators login</button>
+                 <#--  <@trans key="thub.users.login.orConnectWith" />  -->
+            </span>
+        </div>
+    </#if>
+
+
+    <#if authError??>
+        <div class="alert alert-error">${authError}</div>
+    <#elseif flash??>
+        <#list flash?keys as key>
+	        <div class="alert alert-${key} ">
+	        ${flash[key]?string}
+	        </div>
+	    </#list>
+
+        
+    <#elseif SPRING_SECURITY_LAST_EXCEPTION?? && RequestParameters['loginFail']??>
+        <div class="alert alert-error"><@trans key="thub.users.login.unsuccessful" default="Your login attempt was not successful, try again." /></div>
+    </#if>
+    <#if authModeKeys?seq_contains("local")>
+    <div id="demo" class="collapse">
+        <form class="form" action="<@spring.url "/login" />" method="post">
+            <div class="control-group">
+                <div class="controls">
+                    <div class="input-prepend">
+                        <#--  <span class="add-on"><i class="icon-user"></i></span>  -->
+                        <input type="text" id="username" name="username" value="<#if lastUsername?? && RequestParameters.loginFail??><@teamhub.clean lastUsername/></#if>" placeholder="${usernamePlaceholder}"
+                               class="username-field" <#if loginBanned??>disabled="disabled"</#if> autocomplete="off"/>
+                               <div class="control-group">
+                <div class="controls">
+                    <div class="input-prepend">
+                        <#--  <span class="add-on"><i class="icon-key"></i></span>  -->
+                        <input type="password" id="password" name="password" value=""
+                               placeholder="<@trans key="thub.users.login.password.placeholder" />"
+                               class="password-field" <#if loginBanned??>disabled="disabled"</#if> autocomplete="off"/>
+                    <div class="actions clearfix">
+                <div class="forgot-password-wrap"><a
+                    href="<@url name="users:temp_login" />"><@trans key="thub.users.login.forgotPassword" /></a>
+                    </div>
+                </div>
+            </div>
+            </div>
+                    <input type="submit" value="<@trans key="label.login" />" <#if loginBanned??>disabled="disabled"</#if> class="pull-right btn btn-primary"/>
+                </div>
+            </div>
+                </div>
+                    <label class="keepMeLoggedIn checkbox pull-left">
+                    <input name="remember-me" type="checkbox" value="true" checked="checked"
+                           tabindex="4"/> <@trans key="thub.users.login.keepMeLoggedIn" />
+                </label>
+            </div>
+        </div>
+        </form>
+    </#if>
+
+    <#--  <@security.access allowIf='ROLE_REGISTER_WITH_SITE'>
+        <div class="sign-up">
+            <#assign registerLink><a
+                href="<@url name="users:register" />"><@trans key="thub.users.login.signup" /></a></#assign>
+            <@trans key="thub.users.login.dontHaveAccount" params=[registerLink] />
+        </div>
+    </@security.access>
+  -->
+    
     </div>
 </div>
-
 
 <script type="text/javascript">
     function updateAndSubmitOpenID(openid) {
@@ -120,3 +128,4 @@
     }
 </script>
 </body>
+

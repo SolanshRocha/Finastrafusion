@@ -8,7 +8,7 @@
         </div>
     </div>
     <div class="hero-inner">
-        <h1 class="hero-title">My awesome website</h1>
-        <h2 class="hero-subtitle">Look at this website and bask in its amazing glory!</h2>
+        <h1 class="hero-title"><@teamhub.setting key="site.title" /></h1>
+        <h2 class="hero-subtitle"><@teamhub.setting key="site.description" /></h2>
     </div>
 </div>

@@ -137,8 +137,7 @@
 <@security.isAuthenticated>
 
     <div class="category-box col-md-3 col-sm-6 col-xs-12">
-        <a  href="<@url obj=currentUser />">
-
+        <a class="category-box__link" href="<@url obj=currentUser />">
             <div class="category-box__icon">
     <@teamhub.avatar currentUser 60 />
             </div>
