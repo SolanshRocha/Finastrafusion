@@ -28,7 +28,8 @@
     </div>  --> 
 
 <div class="login-modes span6">
-    <h2><@trans key="thub.users.login.title" /></h2>
+    <h2>log in with</h2> 
+    <#--  <@trans key="thub.users.login.title" />  -->
     <div class="social-login clearfix">
         <#assign showHeader = false/>
         <#list authModeKeys as key>
@@ -72,7 +73,7 @@
             </span>
         </div>
     </#if>
-    
+
     <#if authModeKeys?seq_contains("local")>
     <div id="demo" class="collapse">
         <form class="form" action="<@spring.url "/login" />" method="post">
