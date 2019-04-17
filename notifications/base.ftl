@@ -30,7 +30,7 @@ ${msg.subject}
     </style>
 </head>
 
-<body bgcolor="#FDEDEC">
+<body bgcolor="#FFFFFF">
 <table cellpadding="0" cellspacing="0" style="border-radius: 10px solid #BEBEBE;" bgcolor="#FFB6C1" align="center"  width="600" id="notification-body">
     <tr>
         <td>
@@ -39,9 +39,11 @@ ${msg.subject}
                     <td>
                         <table bgcolor="FFFFFF" style="border-bottom:1px solid #FFFFF;" border="0" width="600">
                             <tr>
-                                <td align="center" rowspan="2" width="15%" padding-top="15px"><img
-                                        src="<@url path="https://ci5.googleusercontent.com/proxy/uW7W69HKrZnAaSFGJqXWXtPFTNdIFinVR3T5rAWsH6NCMhM015VRreG1cF24qnmsw4nrWsnJRHyJ9ttRXiFHC5fdkdAN7JFKwFXteLDzCa2nWs4znjIMNRJFQ_gEq_aWqHJZY09bobWMALwO-dXsNv15CWCUhpSK7-vOvR6QwSOSQ4N0x00u6eGM4ly95OLNRRyvd2xVc54=s0-d-e1-ft#https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/cec15110-bcf2-48b6-b583-02d909bd8272/null/FusionFABRIC.Cloud_logo.png" abs=true />" height="50"/>
+                                <td align="center" rowspan="2" width="15% " padding="20px"><img
+                                        src="<@url path="https://ci5.googleusercontent.com/proxy/uW7W69HKrZnAaSFGJqXWXtPFTNdIFinVR3T5rAWsH6NCMhM015VRreG1cF24qnmsw4nrWsnJRHyJ9ttRXiFHC5fdkdAN7JFKwFXteLDzCa2nWs4znjIMNRJFQ_gEq_aWqHJZY09bobWMALwO-dXsNv15CWCUhpSK7-vOvR6QwSOSQ4N0x00u6eGM4ly95OLNRRyvd2xVc54=s0-d-e1-ft#https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/cec15110-bcf2-48b6-b583-02d909bd8272/null/FusionFABRIC.Cloud_logo.png" abs=true/>" height="50"/>
                                 </td>
+
+                                <hr>
     
                                 <#--  <td style="padding:15px;" align="center" valign="middle" rowspan="2" width="15%"><img
                                         src="<#noparse>${userUtils.avatar(recipient)}</#noparse>" height="48"/></td>  -->

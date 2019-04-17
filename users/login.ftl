@@ -18,14 +18,14 @@
 
 <body>
 <div class="login row-fluid">
-    <div class="login-info span6">
-        <h3><@trans key="thub.users.login.info.header" params=[currentSite.name]/></h3>
-        <ul class="icons-ul">
+    <#--  <div class="login-info span6">   -->
+        <#--  <h3><@trans key="thub.users.login.info.header" params=[currentSite.name]/></h3>  -->
+        <#--  <ul class="icons-ul">
             <li><@trans key="thub.users.login.info.blurb.1" /></li>
             <li><@trans key="thub.users.login.info.blurb.2" /></li>
             <li><@trans key="thub.users.login.info.blurb.3" /></li>
         </ul>
-    </div>
+    </div>  --> 
 
 <div class="login-modes span6">
     <h2><@trans key="thub.users.login.title" /></h2>
@@ -47,15 +47,6 @@
         </#if>
         </div>
 
-        <#if authModeKeys?seq_contains("local") && authModeKeys?size &gt; 1>
-        <div class="seperate-or">
-            <span class="or">
-                   <a href="#" data-toggle="collapse" data-target="#demo">Administrators login</button>
-                 <#--  <@trans key="thub.users.login.orConnectWith" />  -->
-            </span>
-        </div>
-    </#if>
-
 
     <#if authError??>
         <div class="alert alert-error">${authError}</div>
@@ -70,6 +61,18 @@
     <#elseif SPRING_SECURITY_LAST_EXCEPTION?? && RequestParameters['loginFail']??>
         <div class="alert alert-error"><@trans key="thub.users.login.unsuccessful" default="Your login attempt was not successful, try again." /></div>
     </#if>
+</div>
+
+<div class="login-modes span6">
+        <#if authModeKeys?seq_contains("local") && authModeKeys?size &gt; 1>
+        <div class="seperate-or">
+            <span class="or">
+                   <a href="#" data-toggle="collapse" data-target="#demo">Administrators login</button>
+                 <#--  <@trans key="thub.users.login.orConnectWith" />  -->
+            </span>
+        </div>
+    </#if>
+    
     <#if authModeKeys?seq_contains("local")>
     <div id="demo" class="collapse">
         <form class="form" action="<@spring.url "/login" />" method="post">
@@ -116,6 +119,8 @@
   -->
     
     </div>
+</div>
+
 </div>
 
 <script type="text/javascript">

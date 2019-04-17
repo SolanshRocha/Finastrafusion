@@ -71,7 +71,7 @@
         </a>
     </div>
     <div class="category-box col-md-3 col-sm-6 col-xs-12">
-        <a class="category-box__link" href="http://localhost:80">
+        <a class="category-box__link" href="/content/kbentry/list.html">
             <div class="category-box__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="70" viewBox="0 0 70 70">
                     <defs>
@@ -96,7 +96,7 @@
                     </g>
                 </svg>
             </div>
-            <div class="box-title">Help Center</div>
+            <div class="box-title">Articles</div>
             <div class="box-description">Learn more</div>
         </a>
     </div>
