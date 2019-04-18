@@ -44,17 +44,18 @@ a:focus {
 // FOOTER NAVBAR -----------------
 
 img {
-  max-width: 130%;
+  max-width: 140%;
+  margin-top: 10px;
 }
 
 .dp-footer-navbar .dp-footer-links a {
   color: @ffdc-fuchsia;
   display: inline-flex;
   margin: 10px;
-  margin-left: 8px;
+  margin-left: 15px;
   margin-top: 30px;
   font-size: 1em;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 
@@ -122,6 +123,7 @@ img {
 
 .gravatar {
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.15);
+  max-width: 100%;
 }
 
 .box-title {
@@ -151,17 +153,28 @@ img {
 }
 
 //creat BUTTON
+
+
+.btn-group > .btn:first-child {
+  background-color: @ffdc-crimson;
+  color: @ffdc-white;
+  font-size: 14px;
+
+&:hover {
+  background-color: @ffdc-crimson;
+  color: @ffdc-white;
+  font-size: 16px;
+}
+}
+
 .btn.btn-warning {
   background-color: @ffdc-crimson;
-  font-size: 14px;
-}
-.btn.btn-warning:hover {
-  background-color: @ffdc-crimson;
-  font-size: 16px;
+  color: @ffdc-white;
 }
 
 .btn-group.open .btn-warning.dropdown-toggle {
   background-color: @ffdc-crimson;
+  color: @ffdc-white
 }
 
 
@@ -205,11 +218,11 @@ img {
 }
 
 .login .login-modes .btn {
-  width: 100%;
+  width: 40%;
   font-size: 16px;
   margin-top: 10px;
-  
-  background-color: @ffdc-fuchsia;
+  background-color: @ffdc-crimson;
+  color: @ffdc-white
   
 }
 
@@ -217,13 +230,7 @@ img {
   background-color: @ffdc-crimson;
 }
 
-.login .login-modes .btn {
-  width: 80%;
-  font-size: 16px;
-  margin-top: 10px;
-  
-  background-color: #c137a2;
-}
+
 
 h2 {
   font-size: 20.5px;
@@ -236,27 +243,27 @@ h2 {
   margin-top: 20px;
 }
 
-.login .seperate-or {
-  text-align: center;
-  margin-bottom: 40px;
-  margin-top: 55px;
-  height: 10px;
-  border-bottom: 1px solid #999999;
-}
-// QUESTION PAGE 
+// .admin-log {
+//   color: @ffdc-white;
 
+//   &:hover {
+//     color: @ffdc-white;
+//   }
+// }
+
+// QUESTION PAGE 
 a {
   color: @ffdc-charcoal;
   text-decoration: none;
 } 
 
+a:hover {
+  color: @ffdc-violet;
+}
+
 .sidebarOne .widget#recent-badges-widget .answer-badges a, .sidebarTwo .widget#recent-badges-widget .answer-badges a {
   font-weight: 600;
   color: @ffdc-charcoal;
-}
-
-a:hover {
-  color: @ffdc-violet;
 }
 
 .comments-container .comment .comment-content .comment-info a { 
@@ -272,7 +279,7 @@ a:hover {
   float: left;
   width: 100%;
   box-sizing: border-box;
-  background-color: #fff;
+  background-color: @ffdc-white;
   padding: 15px 8px;
   border-top: solid 1px #e5e6e7;
 }
@@ -316,9 +323,10 @@ a:hover {
   color: @ffdc-white;
 }
 
-.btn.btn-primary:hover {
+/* .btn.btn-primary:hover {
   background-color: @ffdc-fuchsia;
-}
+  color: @ffdc-white;
+} */
 
 //buttons answers and answers comments
 .btn.btn-default {
@@ -356,16 +364,16 @@ a:hover {
 .btn.btn-outline.btn-outline-success {
   background: @ffdc-crimson;
   color: @ffdc-white;
-  border: 1px solid @ffdc-crimson;
+ 
 }
 
 .btn.btn-outline.btn-outline-success:hover {
-  background: @ffdc-fuchsia;
+  background: @ffdc-crimson;
   color: @ffdc-white;
-  border: 1px solid @ffdc-fuchsia;
+  
 }
 
-// LOGINPAGE
+
 
   
 

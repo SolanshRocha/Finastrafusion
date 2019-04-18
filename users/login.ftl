@@ -28,7 +28,7 @@
     </div>  --> 
 
 <div class="login-modes span6">
-    <h2>log in with</h2> 
+    <h2>Log in with</h2> 
     <#--  <@trans key="thub.users.login.title" />  -->
     <div class="social-login clearfix">
         <#assign showHeader = false/>
@@ -66,9 +66,11 @@
 
 <div class="login-modes span6">
         <#if authModeKeys?seq_contains("local") && authModeKeys?size &gt; 1>
-        <div class="seperate-or">
-            <span class="or">
-                   <a href="#" data-toggle="collapse" data-target="#demo">Administrators login</button>
+        <div>
+            <span>
+                   <a class="admin-log" id="admin" href="#" data-toggle="collapse" data-target="#demo">
+                   <i class="icon-rocket"></i>
+Administrators login</a>
                  <#--  <@trans key="thub.users.login.orConnectWith" />  -->
             </span>
         </div>
